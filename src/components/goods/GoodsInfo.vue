@@ -92,7 +92,9 @@
             },
             addCart(){
                 this.ballFlag=!this.ballFlag;
-                console.log(this.goodsCount);
+                var goodsInfo={id: this.id, counts: this.goodsCount, price: this.goodsprice.sell_price,selected: true};
+                //加入vuex中
+                this.$store.commit("addGoodstoCar", goodsInfo);
             },
             beforeEnter(el){
                 el.style.transform='translate(0,0)';
