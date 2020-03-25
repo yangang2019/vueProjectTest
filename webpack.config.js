@@ -30,7 +30,7 @@ module.exports={
             {test:/\.less$/, use: ['style-loader', 'css-loader', 'less-loader']},
             { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] }, // 配置处理 .scss 文件的 第三方 loader 规则
             // limit 给定的值，是图片的大小，单位是 byte， 如果我们引用的 图片，大于或等于给定的 limit值，则不会被转为base64格式的字符串， 如果 图片小于给定的 limit 值，则会被转为 base64的字符串
-            {test:/\.(png|jpg|jpeg|gif|bmp)$/,use:'url-loader?limit=20000&name=[hash:8]-[name].[ext]'},
+            {test:/\.(png|jpg|jpeg|gif|bmp)$/,use:'url-loader?limit=7631&name=[hash:8]-[name].[ext]&esModule=false'},
             {test:/\.(eot|svg|ttf|woff|woff2)$/,use:'url-loader'},
             {test:/\.js$/,use:'babel-loader',exclude:/node_modules/},
             { test: /\.vue$/, use: 'vue-loader' } // 处理 .vue 文件的 loader
